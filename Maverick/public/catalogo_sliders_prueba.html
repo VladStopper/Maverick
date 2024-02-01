@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maverick</title>
+    <link rel="stylesheet" href="./css/catalogo_sliders_prueba.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo" id="nav_logo">
+                <img src="./img/logo_maverick.png" alt="Maverick">
+                <h2 class="nav__title">Maverick</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items" id="inicio">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links" id="nosotros">Sobre Nosotros</a>
+                </li>
+                <li class="nav__items" id="catalogo">
+                    <a href="#" class="nav__links">Catálogo</a>
+                </li>
+
+                <img src="./img/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./img/menu.svg" class="nav__img">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="aside__container">
+            <div class="filter__container">
+                <h4 class="title">Tipo de Armas : </h4>
+                <div class="filter__elements">
+                    <div class="category">
+                        <input type="checkbox" value="type1" class="category_filter" onclick="script: filter(this)"/>
+                        <label for="chkbox">Pistolas</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type2" class="category_filter" onclick="script: filter(this)" >
+                        <label for="chkbox">Subfusiles</label>
+                    </div>
+
+                    <div class="category"> 
+                        <input type="checkbox" value="type3" class="category_filter" onclick="script: filter(this)">
+                        <label for="chkbox">Escopetas</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type4" class="category_filter" onclick="script: filter(this)">
+                        <label for="chkbox">Fusiles de Asalto</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type5" class="category_filter" onclick="script: filter(this)">
+                        <label for="chkbox">Fusiles de Tirador</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type6" class="category_filter" onclick="script: filter(this)">
+                        <label for="chkbox">Armas Pesadas</label>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+        <section class="weapons__container">
+
+
+            <!-- -----1----- -->
+            <div class="cards" name="type1">
+                <input type="checkbox" name="change" id="chk1"/>
+                <div class="front">
+                    <div class="image_container">
+                        <img src="./img/leftarrow.svg" class="image__cards__arrow" id="before">
+                        <section class="image_card image_card--show"  data-id="1">
+                            <!-- <figure> -->
+                                <img src="./img/Desert_Eagle.png" alt="">
+                            <!-- </figure> -->
+                        </section>
+                        <section class="image_card" data-id="2">
+                            <!-- <figure> -->
+                                <img src="./img/M1911.png" alt="">
+                            <!-- </figure> -->
+                        </section>
+                        <section class="image_card" data-id="3">
+                            <!-- <figure> -->
+                                <img src="./img/Mp5.png" alt="">
+                            <!-- </figure> -->
+                        </section>
+                        <section class="image_card" data-id="4">
+                            <!-- <figure> -->
+                                <img src="./img/M1911.png" alt="">
+                            <!-- </figure> -->
+                        </section>
+                        <img src="./img/rightarrow.svg" class="image__cards__arrow" id="next">
+                    </div>
+
+                    <div class="title">
+                        <h3>Desert Eagle</h3>
+                    </div>
+                    <div class="text">
+                        <p>Tipo de Arma: Pistola</p>
+                        <p>Municion: 50 Action Express</p>
+                        <p>Calibre: 12,7 mm</p>
+                        <p>Cargador: 7 Cartuchos</p>
+                    </div>
+                    <div class="cards__bt">
+                        <label for="chk1">Ver Más</label>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div class="title">
+                        <h3>Desert Eagle</h3>
+                    </div>
+                    <div class="text">
+                        <p>Peso: 1,9kg</p> 
+                        <p>Longitud: 260 mm</p>
+                        <p>Longitud del cañón: 152 mm</p>
+                        <p>Sistema de disparo: recarga accionada por gas </p>
+                        <p>Cadencia de tiro: 60 disparos/min</p>
+                        <p>Alcance efectivo: 50m</p>
+                        <p>Velocidad máxima: 450 m/s</p>
+                    </div>
+                    <div class="cards__bt">
+                            <label for="chk1">Ver Menos</label>
+                    </div>
+                </div>
+            </div>
+         </div>
+            
+        </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/image_sliders.js"></script>
+    
+</body>
+</html>

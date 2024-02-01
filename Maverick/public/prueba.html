@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maverick</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./css/style_nosotros.css"> -->
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo" id="nav_logo">
+                <img src="./img/logo_maverick.png" alt="Maverick">
+                <h2 class="nav__title">Maverick</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items" id="inicio">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links" id="nosotros">Sobre Nosotros</a>
+                </li>
+                <li class="nav__items" id="catalogo">
+                    <a href="#" class="nav__links">Catálogo</a>
+                    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+                        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                    </div>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links"><img src="./img/cart.svg" alt=""></a>
+                    <div id="dropdownCart" class="w3-dropdown-content w3-bar-block w3-border">
+                        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                    </div>
+                </li>
+
+                <img src="./img/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./img/menu.svg" class="nav__img">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+       
+        <div class="w3-container">
+        <h2>Clickable Dropdown</h2>
+        <p>Click on the button to open the dropdown menu.</p>
+        <div class="w3-dropdown-click">
+            <button onclick="addCart()" class="w3-button w3-black">Click Me!</button>
+            
+        </div>
+        </div>
+        <script src="./scripts/nav.js"></script>
+        <script>
+        // function myFunction() {
+        // var x = document.getElementById("Demo");
+        //     if (x.className.indexOf("w3-show") == -1) {
+        //         x.className += " w3-show";
+        //     }
+        //     else { 
+        //         x.className = x.className.replace(" w3-show", "");
+        //     }
+        // }
+
+        function addCart() {
+        var article = document.getElementById("dropdownCart");
+            if (article.className.indexOf("w3-show") == -1) {
+                article.className += " w3-show";
+            }
+            else { 
+                article.className = article.className.replace(" w3-show", "");
+            }
+        }
+        </script>
+    </main>
+</body>
+</html>

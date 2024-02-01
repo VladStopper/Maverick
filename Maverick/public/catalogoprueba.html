@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maverick</title>
+    <link rel="stylesheet" href="./css/style_catalogo_prueba.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo" id="nav_logo">
+                <img src="./img/logo_maverick.png" alt="Maverick">
+                <h2 class="nav__title">Maverick</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items" id="inicio">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links" id="nosotros">Sobre Nosotros</a>
+                </li>
+                <li class="nav__items" id="catalogo">
+                    <a href="#" class="nav__links">Catálogo</a>
+                </li>
+
+                <img src="./img/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./img/menu.svg" class="nav__img">
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="aside__container">
+            <div class="filter__container">
+                <h4 class="filter__title"> <span class="filter__arrow--show"><img src="./img/arrow-up.png" class="filter__arrow_img"> </span> Tipo de Armas : </h4>
+                <div class="filter__elements filter--show">
+                    <div class="category">
+                        <input type="checkbox" value="type1" class="category_filter" onclick="filter: filter(this)"checked>
+                        <label for="chkbox">Pistolas</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type2" class="category_filter" onclick="filter: filter(this)" checked>
+                        <label for="chkbox">Subfusiles</label>
+                    </div>
+
+                    <div class="category"> 
+                        <input type="checkbox" value="type3" class="category_filter" onclick="filter: filter(this)" checked>
+                        <label for="chkbox">Escopetas</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type4" class="category_filter" onclick="filter: filter(this)" checked>
+                        <label for="chkbox">Fusiles de Asalto</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type5" class="category_filter" onclick="filter: filter(this)" checked>
+                        <label for="chkbox">Fusiles de Tirador</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type6" class="category_filter" onclick="filter: filter(this)" checked>
+                        <label for="chkbox">Armas Pesadas</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter__container">
+                <h4 class="filter__title"> <span class="filter__arrow--show"><img src="./img/arrow-up.png" class="filter__arrow_img"> </span> Precio : </h4>
+                <div class="filter__elements filter--show">
+                    <div class="category">
+                        <input type="checkbox" value="type1" class="category_filter" onclick="filter: filter(this)"checked>
+                        <label for="chkbox">Pistolas</label>
+                    </div>
+
+                    <div class="category">
+                        <input type="checkbox" value="type2" class="category_filter" onclick="filter: filter(this)" checked>
+                        <label for="chkbox">Subfusiles</label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="weapons__container">
+
+
+            <!-- -----1----- -->
+            <div class="cards" name="type1" name="card">
+                <input type="checkbox" name="change" id="chk1" class="chk_flip"/>
+                <div class="front">
+                    <figure class="image_card">
+                        <img src="./img/Desert_Eagle.png" alt="">
+                    </figure>
+                    <div class="title">
+                        <h3>Desert Eagle</h3>
+                    </div>
+                    <div class="text">
+                        <p>Tipo de Arma: Pistola</p>
+                        <p>Municion: 50 Action Express</p>
+                        <p>Calibre: 12,7 mm</p>
+                        <p>Cargador: 7 Cartuchos</p>
+                    </div>
+
+                    <label for="chk1" class="label_btn">
+                        <div class="cards__bt">
+                            <h4 class="text_card_bt">Ver Más</h4>
+                        </div>
+                    </label>
+                    
+                </div>
+
+                <div class="back">
+                    <div class="title">
+                        <h3>Desert Eagle</h3>
+                    </div>
+                    <div class="text">
+                        <p>Peso: 1,9kg</p> 
+                        <p>Longitud: 260 mm</p>
+                        <p>Longitud del cañón: 152 mm</p>
+                        <p>Sistema de disparo: recarga accionada por gas </p>
+                        <p>Cadencia de tiro: 60 disparos/min</p>
+                        <p>Alcance efectivo: 50m</p>
+                        <p>Velocidad máxima: 450 m/s</p>
+                    </div>
+
+                    <label for="chk1">
+                        <div class="cards__bt">
+                            <h4 class="text_card_bt">Ver Menos</h4>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+
+
+            <!-- -----2----- -->
+            <div class="cards" name="type1" name="card">
+                <input type="checkbox" name="change" id="chk2" class="chk_flip"/>
+                <div class="front">
+                    <figure class="image_card">
+                        <img src="./img/Magnum.png" alt="">
+                    </figure>
+                    <div class="title">
+                        <h3>Magnum</h3>
+                    </div>
+                    <div class="text">
+                        <p>Tipo de Arma: </p>
+                        <p>Munición: </p>
+                        <p>Calibre: </p>
+                        <p>Cargador: </p>
+                    </div>
+                    <div class="btns__section_cards">
+                        <label for="chk2" class="label_btn">
+                            <div class="cards__bt">
+                                <h4 class="text_card_bt">Ver Más</h4>
+                            </div>
+                        </label>
+                        <label for="chk2" class="label_btn">
+                            <div class="cards__bt">
+                                <h4 class="text_card_bt">Ver Más</h4>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div class="title">
+                        <h3>Magnum</h3>
+                    </div>
+                    <div class="text">
+                        <p>Peso: </p> 
+                        <p>Longitud: </p>
+                        <p>Longitud del cañón: </p>
+                        <p>Sistema de disparo: </p>
+                        <p>Cadencia de tiro: </p>
+                        <p>Alcance efectivo: </p>
+                        <p>Velocidad máxima: </p>
+                    </div>
+                    <label for="chk2">
+                        <div class="cards__bt">
+                            <h4 class="text_card_bt">Ver Menos</h4>
+                        </div>
+                    </label>
+                    
+                </div>
+            </div>
+
+
+            <!-- -----3----- -->
+            <div class="cards" name="type1" name="card">
+                <input type="checkbox" name="change" id="chk3" class="chk_flip"/>
+                <div class="front">
+                <figure class="image_card">
+                    <img src="./img/M1911.png" alt="">
+                </figure>
+                <div class="title">
+                    <h3>M1911</h3>
+                </div>
+                <div class="text">
+                    <p>Tipo de Arma: Pistola</p>
+                    <p>Munición: 45 ACP</p>
+                    <p>Calibre: 11,43 mm</p>
+                    <p>Cargador: 7 Cartuchos</p>
+                </div>
+                <div class="btns__section_cards">
+                    <label for="chk3" class="label_btn">
+                        <div class="cards__bt">
+                            <h4 class="text_card_bt">Ver Más</h4>
+                        </div>
+                    </label>
+                    <label for="chk3" class="label_btn">
+                        <div class="cards__bt">
+                            <h4 class="text_card_bt">Ver Más</h4>
+                        </div>
+                    </label>
+                </div>
+                
+            </div>
+
+            <div class="back">
+                <div class="title">
+                    <h3>M1911</h3>
+                </div>
+                <div class="text">
+                    <p>Peso: 1,3kg</p> 
+                    <p>Longitud: 219 mm</p>
+                    <p>Longitud del cañón: 127 mm</p>
+                    <p>Sistema de disparo: Blowback, acción simple </p>
+                    <p>Cadencia de tiro: 75 disparos/min</p>
+                    <p>Alcance efectivo: 50 m</p>
+                    <p>Velocidad máxima: 243 m/s</p>
+                </div>
+                <label for="chk3" >
+                    <div class="cards__bt">
+                        <h4 class="text_card_bt">Ver Más</h4>
+                    </div>
+                </label>
+                
+            </div>
+            </div>
+
+
+            <!-- -----4----- -->
+            <!-- name=???   name="type2" -->
+            <div class="cards" name="type2">
+                <input type="checkbox" name="change" id="chk4" class="chk_flip"/>
+                <div class="front">
+                <figure class="image_card">
+                    <img src="./img/Mp5.png" alt="">
+                </figure>
+                <div class="title">
+                    <h3>Mp5</h3>
+                </div>
+                <div class="text">
+                    <p>Tipo de Arma: </p>
+                    <p>Munición: </p>
+                    <p>Calibre: </p>
+                    <p>Cargador: </p>
+                </div>
+                <label for="chk4" class="label_btn">
+                    <div class="cards__bt">
+                        <h4 class="text_card_bt">Ver Más</h4>
+                    </div>
+                </label>
+            </div>
+
+            <div class="back">
+                <div class="title">
+                    <h3>Mp5</h3>
+                </div>
+                <div class="text">
+                    <p>Peso:</p> 
+                    <p>Longitud:</p>
+                    <p>Longitud del cañón:</p>
+                    <p>Sistema de disparo:</p>
+                    <p>Cadencia de tiro:</p>
+                    <p>Alcance efectivo:</p>
+                    <p>Velocidad máxima:</p>
+                </div>
+                <label for="chk4">
+                    <div class="cards__bt">
+                        <h4 class="text_card_bt">Ver Menos</h4>
+                    </div>
+                </label>
+                
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/filter.js"></script>
+    
+</body>
+</html>

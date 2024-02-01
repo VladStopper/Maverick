@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #212025;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 0px;
+    color: var(--color-title);
+}
+
+/* Nav */
+
+.nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    cursor: pointer;
+}
+
+.nav__title {
+    font-weight: 300;
+}
+
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav__items {
+    list-style: none;
+}
+
+.nav__links {
+    color:var(--color-title);
+    text-decoration: none;
+}
+
+.nav__links:hover{
+    text-shadow: 0 0 5px rgb(255, 255, 255)
+}
+
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img {
+    display: block;
+    width: 30px;
+}
+
+
+.nav__close {
+    display: var(--show, none);
+}
+
+/* Main */
+
+main{
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 2.5em;
+    padding: 100px 50px;
+    justify-items: center;
+}
+
+/* aside container */
+
+.aside__container{
+    width: 210px;
+    height: 330px;
+    padding: 20px 20px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #393939;
+    border-width: 2px;
+}
+
+.filter__container{
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    align-items: center;
+}
+
+.filter__container h4{
+    padding: 0px 25px;
+}
+
+.filter__elements{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1.3em;
+    padding-top: 10px;
+}
+
+.category{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: baseline;
+    color: rgb(255, 255, 255);
+}
+
+input{
+    margin-top: 6px;
+}
+
+/* weapons container */
+
+.weapons__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em 3em;
+    justify-content: center;
+    /* padding-top: 10px; */
+    
+}
+
+.cards{
+    height: 510px;
+    width: 250px;
+    /* border: solid;
+    border-width: 1px; */
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px 40px 20px;
+    display: grid;
+    grid-template-rows:1fr 40px 1fr 30px;
+    
+    
+
+    /* Diseño  */
+
+    /* box-shadow: 20px 20px 50px rgba(17, 8, 138, 0.5);
+    background: rgba(60, 9, 117, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px); */
+
+    /* Flip-Card */
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    backface-visibility: hidden;
+}
+
+
+.front{
+    height: 510px;
+    width: 250px;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px 40px 20px;
+    display: grid;
+    grid-template-rows: 200px 40px 1fr 40px;
+
+    position: absolute;
+    
+    /* Diseño */
+    box-shadow: 20px 20px 50px rgba(17, 8, 138, 0.5);
+    background: rgba(60, 9, 117, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+
+    
+    /* Flip Card */
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+}
+
+.back{
+    height: 510px;
+    width: 250px;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    align-items: center;
+    padding: 30px 20px 40px 20px;
+    display: grid;
+    grid-template-rows:60px 1fr 40px;
+
+    position: absolute;
+
+    /* Diseño */
+    box-shadow: 20px 20px 50px rgba(17, 8, 138, 0.5);
+    background: rgba(60, 9, 117, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+
+    /* Flip Card */
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+}
+
+.cards:hover{
+    transform: translateY(-10px);
+}
+
+.cards:hover .cover__card img{
+    transform: scale(1.1);
+}
+
+.cover__card{
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cover__card img{
+    width: 110%;
+    transition: all 300ms;
+}
+
+/* Flip Card */
+
+input[name="change"]{
+    display: none;
+}
+
+/* Card 1 */
+
+input[id='chk1']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk1']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk1"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk1"]{
+
+    cursor: pointer;
+}
+
+/* Card 2 */
+
+input[id='chk2']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk2']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk2"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk2"]{
+
+    cursor: pointer;
+}
+
+
+.text{
+    align-self: baseline;
+    text-align: left;
+    padding: 0px 10px;
+}
+
+.image_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.image_card{
+    
+    display: grid;
+    /* grid-template-columns: 1fr max-content; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+.image_card--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+
+.image__cards__arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+
+
+
+.cards__bt{
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-card);
+    font-weight: 600;
+    color: #fff;
+    /* color: var(--color-text); */
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.507);
+}
+
+.cards__bt:hover{
+    text-shadow: 0 0 5px rgb(255, 255, 255)
+}
+
+
+/* Flip Card */
+
+input[name="change"]{
+    display: none;
+}
+
+/* Card 1 */
+
+input[id='chk1']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk1']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk1"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk1"]{
+
+    cursor: pointer;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 400;
+    /* margin-top: 20px; */
+    color: #fff;
+}
+
+.cards p{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+
+
+@media (max-width:900px){
+   
+    main{
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .aside__container{
+        display: var(--show, none);
+    }
+    
+    /* .weapons__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }  */
+
+    
+
+}
+
+@media (max-width:800px){
+    .nav__menu{
+        display: block;
+    }
+
+    .nav__link--menu{
+        margin: 0px 0px;
+        position: fixed;
+        background-color: #393939;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s opacity;
+    }
+
+    .nav__link--show{
+        --show: block;
+        opacity:1 ;
+        pointer-events: unset;
+    }
+
+    .nav__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    /* main{
+        grid-template-columns: 1fr;
+        align-items: center;
+    } */
+    /* .aside__container{
+        display: var(--show, none);
+    } */
+
+    /* .weapons__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }  */
+
+    .cards{
+        align-items: center;
+        /* height: 420px;
+        width: 230px;
+        grid-template-rows: 150px 40px 1fr 40px;
+        font-size: 12px;
+        font-weight: 400; */
+    }
+
+    /* .image_card{
+        max-height: 150px;
+        max-width: 100%;
+        margin: 0px;
+        justify-content: center;
+    } */
+    
+}
+
+@media (max-width:600px){
+    .weapons__container{
+        display: block;
+    }
+
+    .cards{
+        margin-bottom: 3em;
+        /* align-items: center;
+        height: 360px;
+        width: 150px; */
+        /* grid-template-columns: repeat(autofit, minmax(min,max)); */
+    }
+
+
+}
+

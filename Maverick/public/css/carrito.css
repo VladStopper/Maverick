@@ -1,0 +1,19 @@
+.cards_info{
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30px auto;
+    gap: 1em;
+    padding: 10px 30xp;
+    border: solid;
+    border-radius: 10px;
+    
+}
+
+.section_cards_info{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 3cm;
+    padding-top: 100px;
+}
